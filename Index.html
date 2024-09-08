@@ -1,44 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main class="container">
         <div class="login-section">
             <nav class="nav-section">
-
+                <div class="logo-conatiner">
+                    <img class="logo" src="./assets/logo.png" alt="logo">
+                    <div>
+                        <h3>REGIONS</h3>
+                        <p>Mortage</p>
+                    </div>
+                </div>
+                <div class="sign-up-conatiner">
+                    <p>Are you a new customer? </p>
+                    <button type="button">Enroll Now</button>
+                </div>
             </nav>
-            <h1>
-                Welcome Back
-            </h1>
-            <p>
-                Sign in to your Regions MyMortage account
-            </p>
+            <div class="welcome-back">
+                <h1>
+                    Welcome Back
+                </h1>
+                <p>
+                    Sign in to your Regions MyMortage account
+                </p>
+            </div>
+
 
             <!-- form section -->
-            <form action="submit" method="post">
-                <div>
-                    <input type="text" placeholder="Online ID" name="" id="">
-                    <input type="password"  placeholder="Password" name="" id="">
-                </div>
-                <input type="checkbox" name="" id="">
-                <button type="submit">Login</button>
-            </form>
+            <form action="submit">
+                <div class="inputs">
+                    <div>
+                        <div>
+                            <input type="text" placeholder="Online ID" name="" id=""><br>
+                            <input type="password" placeholder="Password" name="" id="">
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="Remember" id=""><label for="Remember">Remember me</label>
+                        </div>
+                        <button type="submit">Login</button>
+                    </div>
 
-            <a href=""></a><span>.</span><a href=""></a>
+                </div>
+            </form>
+            <div class="forgot-section">
+                <a href="">Forgot Online ID?</a><span>.</span><a href="">Forgot Password?</a>
+
+            </div>
 
             <!-- footer -->
-             <footer>
-                <p>Equal Housing Lender</p> <span>.</span> <p>Member FDIC</p><br>
-                <p>&COPY;2023 Regions Financial Corportion. All Rights Reserved. + </p><span>1(800) REGIONS</span>
-             </footer>
+            <footer>
+                <div>
+                    <p>Equal Housing Lender</p> <span>.</span>
+                    <p>Member FDIC</p>
+                </div>
+                <div>
+                    <p>&COPY;2023 Regions Financial Corportion. All Rights Reserved. + </p><span>1(800) REGIONS</span>
+
+                </div>
+            </footer>
         </div>
-        
+        <div class="image-section">
+            <img src="./assets/house.png" alt="">
+        </div>
     </main>
 </body>
 <script src="script.js"></script>
+
 </html>
