@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -21,7 +22,24 @@
                 </div>
                 <div class="sign-up-container">
                     <p>Are you a new customer? </p>
-                    <button type="button">Enroll Now</button>
+                    <button class="hover-btn" type="button">Enroll Now</button>
+                    <div class="tooltip">
+                        <img class="tooltip-pointer" src="./assets/up-arrow.png" alt="tooltip-pointer">
+                        <div class="tooltip-text">
+                            <div>
+                                <img src="./assets/check-mark.png" alt="">
+                                <p>Access your loans online</p>
+                            </div>
+                            <div>
+                                <img src="./assets/check-mark.png" alt="">
+                                <p>Pay your Mortage online</p>
+                            </div>
+                            <div>
+                                <img src="./assets/check-mark.png" alt="">
+                                <p>View your Mortage online</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </nav>
             <div class="welcome-back">
@@ -35,17 +53,22 @@
 
 
             <!-- form section -->
-            <form action="submit">
+            <form>
                 <div class="inputs">
                     <div>
                         <div>
                             <input type="text" placeholder="Online ID" name="" id=""><br>
-                            <input type="password" placeholder="Password" name="" id="">
-                        </div>
+                            <div class="password-container">
+                                <input type="password" placeholder="Password" id="password">
+                                <span class="password-toggle" id="toggleText" onclick="togglePassword()">Show</span>
+                            </div>                        </div>
                         <div class="checkbox">
-                            <input type="checkbox" name="Remember" id=""><label for="Remember">Remember me</label>
+                            <label for="Remember">
+                        <input type="checkbox" name="Remember" id="Remember">Remember
+                                me
+                            </label>
                         </div>
-                        <button type="submit">Login</button>
+                        <button id="btn" type="button">Login</button>
                     </div>
 
                 </div>
@@ -54,12 +77,12 @@
                 <a href="">Forgot Online ID?</a><span>.</span><a href="">Forgot Password?</a>
 
             </div>
-<!-- for mobile devices the enroll section is below -->
-<hr>
-<div class="enroll-container">
-    <p>Are you a new customer? </p>
-    <button type="button">Enroll Now</button>
-</div>
+            <!-- for mobile devices the enroll section is below -->
+            <hr>
+            <div class="enroll-container">
+                <p>Are you a new customer? </p>
+                <button type="button">Enroll Now</button>
+            </div>
             <!-- footer -->
             <footer>
                 <div class="FDIC">

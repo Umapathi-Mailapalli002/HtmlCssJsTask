@@ -43,10 +43,51 @@ main{
 }
 .sign-up-container p{
     color: #64748b;
-   
 }
 
-.sign-up-container button{
+.tooltip{
+    display:none;
+    position:absolute;
+    right:44%;
+    top:10.2%;
+    z-index: 10;
+    
+}
+.tooltip .tooltip-pointer{
+    position:absolute;
+    width:15px;
+    top:-13px;
+    right:16%;
+}
+.tooltip .tooltip-text{
+    width:12rem;
+    background:black;
+   
+}
+.tooltip-text{
+    border-radius:8px;
+    padding:8px;
+}
+.tooltip-text div p{
+    color:white;
+    font-weight:400 !important;
+    font-size:0.9rem;
+    margin-left:-1px;
+}
+
+.tooltip-text div img{
+    width:25px;
+}
+.tooltip-text div{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+   
+    
+}
+.sign-up-container .hover-btn{
+    position: relative;
+    display: block;
     background: white;
     color: red;
     border: 1px solid #6b7280;
@@ -56,6 +97,10 @@ main{
     cursor:pointer;
     font-weight:600;
 
+}
+
+.hover-btn:hover + .tooltip{
+    display: block !important;
 }
 .welcome-back{
     margin: 15vh 0 30px 0;
@@ -81,26 +126,50 @@ form .inputs div div input{
     width:30rem;
     margin: 8px 0;
     border-radius:8px;
-    border: .5px solid #6b7280;
+    border: .5px solid #e5e7eb;
     padding: 0 10px;
 }
-
-form .inputs div .checkbox input{
-    width:18px;
-    height:18px;
-    border: .5px solid #6b7280;
-    margin:12px 5px;
+form .password-container .password-toggle{
+    display:none;
+    position: absolute;
+    width:40px;
+    right: 10px;
+    top: 49%;
+    left: 44%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    
 }
-form .inputs div .checkbox{
+form .inputs div div input:hover{
+    border: .5px solid #94a3b8;
+
+}
+form .inputs div div input:focus{
+    outline: 1px solid yellow; /* Adjust thickness and color as needed */
+    outline-offset: 1px;
+}
+
+form .inputs .checkbox label input{
+    width:15px;
+    height:18px;
+    border: .1px solid #e5e7eb;
+    margin:5px;
+}
+form .inputs .checkbox label input:focus{
+    outline: none;
+}
+form .checkbox label{
     display:flex;
     align-items:center;
+    margin: 10px 0;
 }
 form button{
     width:100%;
     font-size:1.3em;
     padding: 12px 0;
     border-radius:20px;
-    border: .5px solid #6b7280;
+    border: none;
     color:white;
     background:#d1d5db;
     font-weight:600;
@@ -157,8 +226,7 @@ footer div span{
 /* Styles for tablets (e.g., screens up to 768px) */
 @media (max-width: 768px) {
     .login-section {
-        width: 80vw;
-        margin: 0 5%;
+        width: 90vw !important;
     }
 
     .logo {
@@ -175,27 +243,118 @@ footer div span{
     }
 
     form .inputs div div input {
-        width: 90%;
+        width: 60vw;
+        font-size:1rem;
     }
 
     .welcome-back h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .welcome-back p {
+        font-size: 1rem;
+    }
+    form .inputs div div span{
+        position: absolute;
+        right: 10px;
+        top: 46% !important;
+        left: 65% !important;
+        background: none;
+        border: none;
+        cursor: pointer;
+        
+    }
+    .sign-up-container button {
+        padding: 5px 12px;
+    }
+    .tooltip{
+        position:absolute;
+        right:7% !important;
+        top:7.7% !important;
+    }
+    footer {
+        margin: 21vh 0;
+        text-align:center;
+    }
+
+    .image-section img {
+        display:none;
+    }
+}
+/* Styles for mid screens (e.g., screens up to 1024px) */
+@media (max-width: 1024px) {
+    .login-section {
+        width: 50vw;
+        
+    }
+
+    .logo {
+        width: 2.5rem;
+        height: 2rem;
+    }
+
+    .logo-container div h3 {
         font-size: 0.9rem;
+    }
+
+    .logo-container div p {
+        font-size: 0.7rem;
+    }
+
+    form .inputs div div input {
+        width: 40vw;
+    }
+    .tooltip{
+        position:absolute;
+        right:53%;
+        top:8.4%;
+    }
+    .welcome-back h1 {
+        font-size: 3rem;
+    }
+
+    .welcome-back p {
+        font-size: 1rem;
     }
 
     .sign-up-container button {
         padding: 5px 12px;
     }
-
+    .sign-up-container p {
+       text-wrap:nowrap;
+       margin-left:10px;
+       margin-right:3px;
+    }
+    form .inputs div div span{
+        position: absolute;
+        right: 10px;
+        top: 49%;
+        left: 44%;
+        background: none;
+        border: none;
+        cursor: pointer;
+        
+    }
     footer {
-        margin: 10vh 0;
+        margin: 17vh 0;
     }
 
     .image-section img {
-        height: 70vh;
+        width:45vw;
+    }
+    footer .copy-write p{
+        text-wrap:nowrap;
+    }
+    footer .FDIC{
+        text-wrap:nowrap;
+        display:flex;
+    }
+    footer .copy-write .dot{
+   display:none;
+    }
+    footer div{
+        display: inline-block;
+        text-align:center;
     }
 }
 
@@ -248,6 +407,7 @@ footer div span{
     .enroll-container p{
         color: #64748b;
         font-size:1.2rem;
+        text-wrap:nowrap;
     }
     .enroll-container button{
         background: white;
@@ -259,7 +419,19 @@ footer div span{
         cursor:pointer;
         font-weight:600;
         font-size:1.2rem;
+        text-wrap:nowrap;
     
+    }
+    form .inputs div div span{
+        position: absolute;
+        font-size:1.2rem !important;
+        right: 10px;
+        top: 44.5% !important;
+        left: 80% !important;
+        background: none;
+        border: none;
+        cursor: pointer;
+        
     }
     hr{
         display:flex;
